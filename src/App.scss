@@ -1,0 +1,388 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+// Login page and Register design.
+.formContainer,
+.homeContainer {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(208 164 255);
+}
+.formWrapper {
+  background-color: rgb(255, 255, 255);
+  padding: 1.25rem 60px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(129, 49, 160);
+  }
+  .title {
+    font-size: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    input {
+      outline: none;
+      width: 240px;
+      border: none;
+      padding: 0.75rem;
+      border-bottom: 1px solid gray;
+      &::placeholder {
+        color: rgb(175, 175, 175);
+      }
+    }
+    button {
+      padding: 0.75rem;
+      color: white;
+      background-color: rgba(48, 48, 171, 0.797);
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.5s;
+      &:hover {
+        background-color: rgb(182, 151, 151);
+        color: black;
+      }
+    }
+  }
+  p {
+    font-size: 1rem;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+// Home
+.homeWrapper {
+  display: flex;
+  height: 80vh;
+  width: 70vw;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 1);
+  .left {
+    flex: 1;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(129 81 152);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .right {
+    flex: 2;
+  }
+}
+// NavBar
+.navContainer {
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(74, 53, 84);
+  color: rgb(255, 255, 255);
+  .navWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    gap: 1rem;
+
+    .logo {
+      font-size: 1rem;
+      font-weight: bold;
+      // color: rgb(129, 49, 160);
+    }
+    .user {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .userName {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      button {
+        padding: 5px;
+        margin: 0;
+        background-color: rgb(197, 49, 49);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      button:hover {
+        color: white;
+        background-color: rgb(133, 95, 95);
+      }
+    }
+  }
+}
+// search bar design
+.searchBox {
+  background-color: rgb(129 81 152);
+  input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    background-color: rgb(246, 241, 241);
+    &::placeholder {
+      color: rgb(21, 20, 20);
+    }
+    outline: none;
+  }
+  .user {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    transition: all 0.25s;
+
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .userDetails {
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      .name {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .message {
+        color: rgb(175, 175, 175);
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .user:hover {
+    background-color: rgb(54, 29, 66);
+  }
+}
+// userContainer design
+
+.userContainer {
+  .userWrapper {
+    .user {
+      cursor: pointer;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0.5rem;
+      transition: all 0.25s;
+      border-bottom: 1px solid black;
+
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .userDetails {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        .name {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        .message {
+          color: rgb(175, 175, 175);
+          font-size: 0.75rem;
+        }
+      }
+    }
+    .user:hover {
+      background-color: rgb(54, 29, 66);
+    }
+  }
+}
+
+// Chat box..
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hide {
+  height: 100%;
+  visibility: hidden;
+}
+// Chat Header..
+.chatHeader {
+  flex: 1;
+  background-color: rgb(77, 15, 109);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    img {
+      object-fit: cover;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+    }
+    p {
+      font-weight: bold;
+      font-size: large;
+      color: white;
+      margin: 0;
+    }
+  }
+  .connectivity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    span {
+      font-size: x-large;
+    }
+  }
+}
+// messages...
+.messages {
+  background-color: rgb(199, 142, 213);
+  display: flex;
+  flex: 8;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scroll-behavior: smooth;
+}
+// individual message
+.message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  .user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      height: 28px;
+      width: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    span {
+      color: rgb(37, 34, 34);
+      font-size: 10px;
+    }
+  }
+  p {
+    margin: 0;
+    background-color: #fff;
+    width: fit-content;
+    padding: 0.5rem;
+    color: black;
+    text-align: center;
+    border-radius: 0px 10px 10px 10px;
+  }
+  &.owner {
+    flex-direction: row-reverse;
+    p {
+      margin: 0;
+      background-color: rgb(95, 25, 110);
+      color: white;
+      padding: 0.5rem;
+      border-radius: 10px 0px 10px 10px;
+    }
+  }
+}
+// Input box
+.input {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  input {
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    border: none;
+    &::placeholder {
+      color: rgb(163, 159, 159);
+      font-size: 15px;
+    }
+  }
+  .send {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    input {
+      display: none;
+      // visibility: hidden;
+    }
+    span {
+      font-size: x-large;
+    }
+    button {
+      padding: 10px 30px;
+      color: white;
+      background-color: rgb(72, 46, 90);
+      border: none;
+      border-radius: 5px;
+    }
+  }
+}
